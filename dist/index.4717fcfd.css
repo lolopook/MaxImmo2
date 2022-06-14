@@ -1,0 +1,119 @@
+body {
+  color: #fff;
+}
+
+body nav {
+  color: #000;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10%;
+  padding: 22px 0;
+  display: flex;
+}
+
+body nav .logoNavBtn {
+  flex-direction: row;
+  display: flex;
+}
+
+body nav .logoNavBtn .logoEnseigne {
+  align-items: center;
+  margin-right: 6%;
+  display: flex;
+}
+
+body nav .logoNavBtn .linkPages {
+  align-items: center;
+  display: flex;
+}
+
+body nav .logoNavBtn .linkPages .link {
+  width: 110px;
+  margin: 0 20px 20px 0;
+}
+
+body nav .recall {
+  align-items: center;
+  display: flex;
+}
+
+body .sectionOne {
+  border-radius: 10px 10px 4px 4px;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10%;
+  display: flex;
+  box-shadow: 0 7px 40px #aeaeae;
+}
+
+body .sectionOne .imageTitle {
+  width: 100%;
+  height: 497px;
+  background-image: url("backgroundTitle.46caec4a.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px 10px 0 0;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+
+body .sectionOne .imageTitle .titleText h2 {
+  font-size: 56px;
+}
+
+body .sectionOne .imageTitle .titleText p {
+  width: 330px;
+}
+
+body .sectionOne .imageTitle .titleText .color {
+  color: #c0dff8;
+}
+
+body .sectionOne .search {
+  width: 100%;
+  border-radius: 0 0 4px 4px;
+}
+
+body .sectionOne .search form {
+  color: #aeaeae;
+  border-radius: 0 0 4px 4px;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: flex;
+}
+
+body .sectionOne .search form .searchCase {
+  width: 30%;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  margin: 0 10px;
+  padding: 20px 10px;
+}
+
+body .sectionOne .search form .searchCase input {
+  background-color: #f8f8f8;
+  border: none;
+  margin-left: 5px;
+}
+
+body .sectionOne .search form .btnSubmit {
+  color: #aeaeae;
+  width: 31%;
+  background-color: #ffa800;
+  border-radius: 8px;
+  align-items: center;
+  margin: 5px 10px;
+  padding: 20px 10px;
+}
+
+body .sectionOne .search form .btnSubmit button {
+  color: #fff;
+  background-color: #ffa800;
+  border: none;
+}
+
+/*# sourceMappingURL=index.4717fcfd.css.map */
