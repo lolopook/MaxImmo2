@@ -5,6 +5,8 @@ body {
     color: #FFFFFF;
     // background-color: black;
 
+
+    // la navigation
     nav {
         color : $colorBlack;
 
@@ -20,32 +22,50 @@ body {
             display: flex;
             flex-direction: row;
 
-            .logoEnseigne{
+            .logoEnseigne {
                 display: flex;
                 align-items: center;
 
-                margin-right: 6%;
+                margin-right: 80px;
             }
 
+            // les menus des pages avec les liens
             .linkPages {
                 display: flex;
                 align-items: center;
 
                 .link {
-                    width: 110px;
-                    margin: 0 20px 20px 0;
+                    display: flex;
+                    align-items: center;
+
+                    color: black;
+
+                    text-decoration: none;
+                    width: 120px;
+                    padding: auto;
+
+                    // le pseudo trait en dessous de la selection
+                    &:hover {
+                        padding: auto auto 10px;
+
+                        border-bottom-style:solid;
+                        padding-bottom: 1em;
+                        
+                    }
                 }
             }   
         }
     
+
+        // le rapelle de la nav
         .recall {
             display: flex;
             align-items: center;
         }
     }
 
-
-    .sectionOne {
+    // premier section avec photo et commentaire.
+    section {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -55,6 +75,7 @@ body {
 
         margin: 0 10%;
 
+        //concerne l'image du font du titre
         .imageTitle {
             border-radius: 10px 10px 0 0;
             width: 100%;
@@ -68,6 +89,7 @@ body {
 
             height: 497px;
             
+            // text en dessous du titre
             .titleText {
                 h2 {
                     font-size: 56px;
@@ -81,10 +103,10 @@ body {
             }
         }
 
+        // debut de design du formulaire
         .search {
             width: 100%;
             border-radius: 0 0 4px 4px;
-
 
             form {
                 display: flex;
@@ -115,6 +137,8 @@ body {
                         margin-left: 5px;
                     }
                 }   
+
+                //button submit btn
                 .btnSubmit {
                     align-items: center;
 

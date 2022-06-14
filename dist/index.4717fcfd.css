@@ -19,7 +19,7 @@ body nav .logoNavBtn {
 
 body nav .logoNavBtn .logoEnseigne {
   align-items: center;
-  margin-right: 6%;
+  margin-right: 80px;
   display: flex;
 }
 
@@ -29,8 +29,17 @@ body nav .logoNavBtn .linkPages {
 }
 
 body nav .logoNavBtn .linkPages .link {
-  width: 110px;
-  margin: 0 20px 20px 0;
+  color: #000;
+  width: 120px;
+  align-items: center;
+  padding: auto;
+  text-decoration: none;
+  display: flex;
+}
+
+body nav .logoNavBtn .linkPages .link:hover {
+  border-bottom-style: solid;
+  padding: auto auto 1em;
 }
 
 body nav .recall {
@@ -38,7 +47,7 @@ body nav .recall {
   display: flex;
 }
 
-body .sectionOne {
+body section {
   border-radius: 10px 10px 4px 4px;
   flex-direction: column;
   align-items: center;
@@ -47,7 +56,7 @@ body .sectionOne {
   box-shadow: 0 7px 40px #aeaeae;
 }
 
-body .sectionOne .imageTitle {
+body section .imageTitle {
   width: 100%;
   height: 497px;
   background-image: url("backgroundTitle.46caec4a.png");
@@ -59,24 +68,24 @@ body .sectionOne .imageTitle {
   display: flex;
 }
 
-body .sectionOne .imageTitle .titleText h2 {
+body section .imageTitle .titleText h2 {
   font-size: 56px;
 }
 
-body .sectionOne .imageTitle .titleText p {
+body section .imageTitle .titleText p {
   width: 330px;
 }
 
-body .sectionOne .imageTitle .titleText .color {
+body section .imageTitle .titleText .color {
   color: #c0dff8;
 }
 
-body .sectionOne .search {
+body section .search {
   width: 100%;
   border-radius: 0 0 4px 4px;
 }
 
-body .sectionOne .search form {
+body section .search form {
   color: #aeaeae;
   border-radius: 0 0 4px 4px;
   justify-content: space-around;
@@ -86,7 +95,7 @@ body .sectionOne .search form {
   display: flex;
 }
 
-body .sectionOne .search form .searchCase {
+body section .search form .searchCase {
   width: 30%;
   background-color: #f8f8f8;
   border-radius: 8px;
@@ -94,13 +103,13 @@ body .sectionOne .search form .searchCase {
   padding: 20px 10px;
 }
 
-body .sectionOne .search form .searchCase input {
+body section .search form .searchCase input {
   background-color: #f8f8f8;
   border: none;
   margin-left: 5px;
 }
 
-body .sectionOne .search form .btnSubmit {
+body section .search form .btnSubmit {
   color: #aeaeae;
   width: 31%;
   background-color: #ffa800;
@@ -110,7 +119,7 @@ body .sectionOne .search form .btnSubmit {
   padding: 20px 10px;
 }
 
-body .sectionOne .search form .btnSubmit button {
+body section .search form .btnSubmit button {
   color: #fff;
   background-color: #ffa800;
   border: none;
