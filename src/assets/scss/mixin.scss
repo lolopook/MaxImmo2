@@ -1,0 +1,10 @@
+@mixin nunito {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+}
+
+@mixin blur {
+    backdrop-filter: grayscale(30%);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(14px);
+}

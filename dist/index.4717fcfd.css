@@ -1,9 +1,12 @@
+@import "https://fonts.googleapis.com/css2?family=Khula:wght@600&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&display=swap";
 body {
   color: #fff;
+  font-family: Khula, sans-serif;
 }
 
 body nav {
-  color: #000;
+  color: #282f65;
   width: 80%;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +32,7 @@ body nav .logoNavBtn .linkPages {
 }
 
 body nav .logoNavBtn .linkPages .link {
-  color: #000;
+  color: #282f65;
   width: 120px;
   align-items: center;
   padding: auto;
@@ -43,8 +46,18 @@ body nav .logoNavBtn .linkPages .link:hover {
 }
 
 body nav .recall {
-  align-items: center;
-  display: flex;
+  color: #ffa800;
+  text-align: center;
+  width: 185px;
+  cursor: pointer;
+  border: 1px solid #ffa800;
+  border-radius: 4px;
+  padding: 16px 10px;
+}
+
+body nav .recall a {
+  color: #ffa800;
+  text-decoration: none;
 }
 
 body section {
@@ -68,16 +81,148 @@ body section .imageTitle {
   display: flex;
 }
 
+body section .imageTitle .titleText {
+  width: 40%;
+}
+
 body section .imageTitle .titleText h2 {
-  font-size: 56px;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 70px;
 }
 
 body section .imageTitle .titleText p {
-  width: 330px;
+  font-family: Nunito, sans-serif;
+  font-weight: 400;
 }
 
 body section .imageTitle .titleText .color {
   color: #c0dff8;
+}
+
+body section .imageTitle .comments {
+  width: 40%;
+}
+
+body section .imageTitle .comments .containerCom {
+  margin: 10%;
+}
+
+body section .imageTitle .comments .containerCom .comStartPict {
+  width: 500px;
+  height: 350px;
+  align-items: center;
+  margin: 0;
+  display: flex;
+  position: relative;
+  translate: -20%;
+}
+
+body section .imageTitle .comments .containerCom .comStartPict .pictOne {
+  position: absolute;
+  top: 0;
+  left: 275px;
+}
+
+body section .imageTitle .comments .containerCom .comStartPict .textTwo {
+  backdrop-filter: grayscale(30%);
+  backdrop-filter: blur(14px);
+  width: 68%;
+  height: 72px;
+  background: #00000080;
+  border-radius: 6px;
+  position: absolute;
+  top: 60px;
+  left: 70px;
+}
+
+body section .imageTitle .comments .containerCom .comStartPict .textMaxime > p {
+  color: #fff;
+  font-family: Nunito, sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 65px;
+  left: 85px;
+}
+
+body section .imageTitle .comments .containerCom .comStartPict .pictTwo {
+  width: 110px;
+  height: 28px;
+  position: absolute;
+  top: 30px;
+  left: 85px;
+}
+
+body section .imageTitle .comments .containerCom .comStartPict .pictTwo p {
+  text-align: center;
+  color: #ffa800;
+  background-color: #3e3e3e;
+  border-radius: 6px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+body section .imageTitle .comments .containerCom .comStartPict .pictThree {
+  position: absolute;
+  top: 100px;
+  left: -5px;
+}
+
+body section .imageTitle .comments .containerCom .comStartPict .pictFour {
+  position: absolute;
+  top: 110px;
+  left: 380px;
+}
+
+body section .imageTitle .comments .containerCom .comStartPict .ytCom {
+  width: 250px;
+  height: 50px;
+  backdrop-filter: grayscale(30%);
+  backdrop-filter: blur(14px);
+  background: #00000080;
+  border-radius: 4px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  display: flex;
+  position: absolute;
+  top: 180px;
+  left: 30px;
+}
+
+body section .imageTitle .comments .containerCom .comStartPict .ytCom p {
+  margin: auto;
+  font-family: Nunito, sans-serif;
+  font-weight: 300;
+}
+
+body section .imageTitle .comments .containerCom .comStartPict .ytCom .play {
+  position: absolute;
+  left: 250px;
+}
+
+body section .imageTitle .comments .containerCom .comStartPict .pictFive {
+  position: absolute;
+  bottom: 50px;
+  right: 130px;
+}
+
+body section .imageTitle .comments .containerCom .comStartPict .starTwo img {
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 110px;
+}
+
+body section .imageTitle .comments .containerCom .comStartPict .starTwo .containerStar p {
+  color: #ffa800;
+  background-color: #3e3e3e;
+  border-radius: 6px;
+  padding: 5px 15px;
+  font-size: 14px;
+  position: absolute;
+  bottom: 40px;
+  left: 170px;
 }
 
 body section .search {

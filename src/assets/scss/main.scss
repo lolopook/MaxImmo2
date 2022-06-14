@@ -1,14 +1,15 @@
-@import "colors";
+@import "colors", "font", "mixin";
 
 
 body {
     color: #FFFFFF;
+    font-family: 'Khula', sans-serif;
     // background-color: black;
 
 
     // la navigation
     nav {
-        color : $colorBlack;
+        color: $navyBlue;
 
         display: flex;
         justify-content: space-between;
@@ -38,7 +39,7 @@ body {
                     display: flex;
                     align-items: center;
 
-                    color: black;
+                    color: $navyBlue;
 
                     text-decoration: none;
                     width: 120px;
@@ -48,19 +49,33 @@ body {
                     &:hover {
                         padding: auto auto 10px;
 
-                        border-bottom-style:solid;
+                        border-bottom-style: solid;
                         padding-bottom: 1em;
-                        
+
                     }
+
                 }
-            }   
+            }
         }
-    
+
 
         // le rapelle de la nav
         .recall {
-            display: flex;
-            align-items: center;
+            color: $primaryYellowOmlette;
+
+            padding: 16px 10px;
+            text-align: center;
+            width: 185px;
+
+            border: solid 1px $primaryYellowOmlette;
+            border-radius: 4px;
+
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                color: $primaryYellowOmlette;
+            }
         }
     }
 
@@ -88,17 +103,163 @@ body {
             background-size: cover;
 
             height: 497px;
-            
+
             // text en dessous du titre
             .titleText {
+                width: 40%;
+
                 h2 {
-                    font-size: 56px;
+                    font-weight: 700;
+                    font-size: 44px;
+                    line-height: 70px;
                 }
+
                 p {
-                    width: 330px;
+                    font-family: 'Nunito', sans-serif;
+                    font-weight: 400;
                 }
+
                 .color {
                     color: $secondaryBlueSky;
+                }
+            }
+
+            // commentaire de title.
+            .comments {
+                width: 40%;
+
+                .containerCom {
+                    margin: 10%;
+
+                    .comStartPict {
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+
+                        position: relative;
+
+                        translate: -20% 0;
+                        width: 500px;
+                        height: 350px;
+
+                        // position des coms et photos
+                        .pictOne {
+                            position: absolute;
+                            top: 0px;
+                            left: 275px;
+                        }
+
+                        // design des "bulles" et effet blur
+                        .textTwo {
+                            position: absolute;
+                            top: 60px;
+                            left: 70px;
+                            @include blur;
+                            border-radius: 6px;
+                            width: 68%;
+                            height: 72px;
+                        }
+
+                        .textMaxime>p {
+                            position: absolute;
+                            top: 65px;
+                            left: 85px;
+
+                            @include nunito;
+                            color: $neutralWhite;
+
+                        }
+
+                        .pictTwo {
+                            position: absolute;
+                            width: 110px;
+                            height: 28px;
+
+                            top: 30px;
+                            left: 85px;
+
+                            p {
+                                font-size: 14px;
+                                text-align: center;
+                                color: $primaryYellowOmlette;
+                                background-color: $greydark;
+                                padding: 5px;
+                                border-radius: 6px;
+                            }
+                        }
+
+                        .pictThree {
+                            position: absolute;
+                            top: 100px;
+                            left: -5px;
+                        }
+
+                        .pictFour {
+                            position: absolute;
+                            top: 110px;
+                            left: 380px;
+                        }
+
+                        .ytCom {
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+
+                            position: absolute;
+                            top: 180px;
+                            left: 30px;
+
+                            width: 250px;
+                            height: 50px;
+                            border-radius: 4px;
+                            padding: 10px 10px;
+
+                            @include blur;
+
+                            p {
+                                margin: auto;
+                                @include nunito
+                            }
+
+                            .play {
+                                position: absolute;
+                                left: 250px;
+                            }
+
+                        }
+
+                        .pictFive {
+                            position: absolute;
+                            bottom: 50px;
+                            right: 130px;
+                        }
+
+                        .starTwo {
+                            img 
+                            {
+                                padding: 30px;
+                                position: absolute;
+                                bottom : 0px; left :110px;
+                            }
+                            .containerStar 
+                            {
+
+                                p {
+                                    font-size: 14px;
+                                    color: $primaryYellowOmlette;
+                                    background-color: $greydark;
+                                    padding: 5px 15px;
+                                    border-radius: 6px;
+
+                                    position: absolute;
+                                    bottom : 40px; left :170px;
+                                }
+
+                            
+                            }
+                        }
+
+                    }
                 }
             }
         }
@@ -113,30 +274,30 @@ body {
                 justify-content: space-around;
                 align-items: center;
 
-                border-radius: 0 0 4px 4px; 
+                border-radius: 0 0 4px 4px;
 
                 color: $neutralGrey3;
 
                 margin-top: 16px;
                 margin-bottom: 16px;
-                
+
                 .searchCase {
                     width: 30%;
-                    
+
                     background-color: $neutrailGrey4;
-                    border-radius: 0 0 4px 4px;                    
+                    border-radius: 0 0 4px 4px;
                     padding: 20px 10px;
 
                     border-radius: 8px;
                     margin: 0 10px;
-                    
+
                     input {
                         border: none;
                         background-color: $neutrailGrey4;
 
                         margin-left: 5px;
                     }
-                }   
+                }
 
                 //button submit btn
                 .btnSubmit {
@@ -144,13 +305,14 @@ body {
 
                     color: $neutralGrey3;
                     background-color: $primaryYellowOmlette;
-                    
+
                     padding: 20px 10px;
                     border-radius: 8px;
 
                     width: 31%;
 
                     margin: 5px 10px;
+
                     button {
                         border: none;
                         background-color: $primaryYellowOmlette;
@@ -163,4 +325,3 @@ body {
 
 
 }
-
