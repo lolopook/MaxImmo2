@@ -270,4 +270,50 @@ body section .search form .btnSubmit button {
   border: none;
 }
 
+body .partenaire {
+  height: 700px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  margin: 0 10%;
+  padding-top: 6%;
+  display: flex;
+}
+
+body .partenaire .nosPartenaires {
+  width: 29%;
+  color: #000;
+  flex-direction: column;
+  display: flex;
+}
+
+body .partenaire .nosPartenaires p {
+  font-family: Nunito, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+body .partenaire .maStory {
+  width: 69%;
+  color: #000;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+
+body .partenaire .maStory .textMaStory {
+  flex-direction: column;
+  display: flex;
+}
+
+body .partenaire .maStory .textMaStory .iconeMaStory, body .partenaire .maStory .textMaStory .iconeMaStory .maStoryIcone {
+  display: flex;
+}
+
+body .partenaire .maStory .textMaStory .iconeMaStory .maStoryIcone .explainIcone {
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+}
+
 /*# sourceMappingURL=index.4717fcfd.css.map */

@@ -323,5 +323,53 @@ body {
         }
     }
 
+    //section partenaire
+    .partenaire {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+        padding-top: 6%;
+        margin: 0 10%;
+        height: 700px;
+        .nosPartenaires {
+            width: 29%;
+            color: black;
+
+            display: flex;
+            flex-direction: column;
+            p {
+                @include nunito;
+                font-size: 18px;
+            }
+        }
+
+        .maStory 
+        {
+            width: 69%;
+            color: black;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .textMaStory {
+                display: flex;
+                flex-direction: column;
+
+                .iconeMaStory {
+                    display: flex;
+                    .maStoryIcone {
+                        display: flex;
+                        .explainIcone {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 }

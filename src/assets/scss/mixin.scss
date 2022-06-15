@@ -5,6 +5,6 @@
 
 @mixin blur {
     backdrop-filter: grayscale(30%);
-    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(14px);
+    background: rgba(0, 0, 0, 0.5);
 }
