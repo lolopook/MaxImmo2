@@ -112,21 +112,25 @@
         <!-- formulaire pour trouver le bien -->
         <div class="search">
             <form action="#!">
+                
+                <label for="searchKey" class="searchCase">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Rechercher par mot clé" name="#" id="searchKey">
+                </label>    
 
                 <div class="searchCase">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Rechercher par mot clé" name="#" >
+                    <i class="fa-solid fa-house"></i>
+                    <select type="select" placeholder="Type de bien" name="#">
+                        <option value="">Type de bien</option>
+                        <option value="">Appart</option>
+                        <option value="">Maison</option>
+                    </select>
                 </div>
 
-                <div class="searchCase">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Rechercher par mot clé" name="#" >
-                </div>
-
-                <div class="searchCase">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Rechercher par mot clé" name="#" >
-                </div>
+                <label for="searchLoc" class="searchCase">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" placeholder="Localisation recherchée" name="#" >
+                </label>
 
                 <div class="btnSubmit">
                     <button type="submit">Trouvez un bien</button>
@@ -144,10 +148,10 @@
                 Nous sommes agréés avec les plus grandes agences immobilières de la région
             </p>
             <div class="pictPartnerOne">
-                <img src="./assets/imgs/Hero Pict.png" alt="#">
-                <div>
-                    <img src="./assets/imgs/hashT.png" alt="#">
-                    <p>Vous cherchez la perle rare, nous trouvons pour vous</p>
+                <img class="heroPict" src="./assets/imgs/Hero Pict.png" alt="#">
+                <div class="hashTagText">
+                    <img class="hastTagImage" src="./assets/imgs/hashT.png" alt="#">
+                    <p class="hastTText">Vous cherchez la perle rare, nous trouvons pour vous</p>
                 </div>
             </div>
         </div>
@@ -160,16 +164,16 @@
                 <p>Créée en 2012, l’agence MaxImmo est maintenant reconnue dans toute la région Grande-Aquitaine et régions voisines.</p>
                 <div class="iconeMaStory">
                     <div class="maStoryIcone">
-                        icone
+                        <img src="./assets/imgs/Icon engrenange.png" alt="">
                         <div class="explainIcone">
-                            <h5>Fiabilité</h5>
+                            <p class="title5">Fiabilité</p>
                             <p>Un sens du service inégalé</p>
                         </div>
                     </div>
                     <div class="maStoryIcone">
-                        icone
+                        <img src="./assets/imgs/efficacité.png" alt="">
                         <div class="explainIcone">
-                            <h5>Fiabilité</h5>
+                            <p class="title5">Fiabilité</p>
                             <p>Un sens du service inégalé</p>
                         </div>
                     </div>
@@ -179,7 +183,75 @@
 
     </div>
 
+        <!-- section des card -->
+    <div class="sectionService">
+        <div class="titleService">
+            <h2>
+                Tous les services <br> que nous proposons
+            </h2>
+        </div>
 
+        <div class="containerRowCard">
+
+            <div class="cardContainer">
+
+                <i class="fa-solid fa-house-circle-check"></i>
+                <p class="titleCard">
+                    Acheter
+                </p>
+                <p class="cardText">
+                    Trouvez le bien qui vous correspond, nous vous conseillons et proposons des produits respectant vos demandes et conditions.
+                </p>
+                <button class="cardBtn">
+                    Trouver un bien
+                </button>
+    
+            </div>
+
+            <div class="cardContainer" id="selectCardMidle">
+
+                <i class="fa-solid fa-house-chimney-window"></i>                <p class="titleCard">
+                    Vendre
+                </p>
+                <p class="cardText">
+                    Trouvez le bien qui vous correspond, nous vous conseillons et proposons des produits respectant vos demandes et conditions.
+                </p>
+                <button class="cardBtn">
+                    Trouver un bien
+                </button>
+    
+            </div>
+
+            <div class="cardContainer">
+
+                <i id="iconeContract" class="fa-solid fa-file-contract"></i>                <p class="titleCard">
+                    Louer
+                </p>
+                <p class="cardText">
+                    Trouvez le bien qui vous correspond, nous vous conseillons et proposons des produits respectant vos demandes et conditions.
+                </p>
+                <button class="cardBtn">
+                    Trouver un bien
+                </button>
+    
+            </div>
+
+        </div>
+
+    </div>
+
+    <dic class="newsLetter">
+        <div class="newsLetterContainer">
+            <div class="titleTextNews">
+                <h3>Estimez votre bien immobilier</h3>
+                <p>Commencez par entrer votre adresse email</p>
+            </div>
+            <div class="InputNewsLetter">
+                <input type="text" placeholder="Votre adresse élétronique">
+                <button type="submit">Estimation</button>
+            </div>
+        </div>
+    </dic>
 
     <!-- script js avec le type -->
     <script src="./assets/js/app.js" type="module"></script>

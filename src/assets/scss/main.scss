@@ -1,11 +1,10 @@
-@import "colors", "font", "mixin";
+@import "partials/colors", "partials/font", "partials/mixin";
 
 
 body {
-    color: #FFFFFF;
+    color: #c0c0c0;
     font-family: 'Khula', sans-serif;
     // background-color: black;
-
 
     // la navigation
     nav {
@@ -15,8 +14,8 @@ body {
         justify-content: space-between;
         align-items: center;
 
-        width: 80%;
-        margin: 0 10%;
+        max-width: 1311px;
+        margin: 0 auto;
         padding: 22px 0;
 
         .logoNavBtn {
@@ -34,25 +33,27 @@ body {
             .linkPages {
                 display: flex;
                 align-items: center;
-
+                
                 .link {
+                    padding: 1px 10px;
                     display: flex;
                     align-items: center;
 
-                    color: $navyBlue;
+                    color: $neutralGrey3;
 
                     text-decoration: none;
-                    width: 120px;
-                    padding: auto;
 
                     // le pseudo trait en dessous de la selection
                     &:hover {
-                        padding: auto auto 10px;
-
-                        border-bottom-style: solid;
-                        padding-bottom: 1em;
+                        
+                        color: $navyBlue;
+                        padding-bottom: 0.5em;
+                        background-image: url(../imgs/Active\ Pointer.png);
+                        background-repeat: no-repeat;
+                        background-position: bottom center;
 
                     }
+                    
 
                 }
             }
@@ -61,14 +62,8 @@ body {
 
         // le rapelle de la nav
         .recall {
-            color: $primaryYellowOmlette;
-
-            padding: 16px 10px;
-            text-align: center;
-            width: 185px;
-
-            border: solid 1px $primaryYellowOmlette;
-            border-radius: 4px;
+            @include nunito;
+            @include BtnJauneOeufOutilne;
 
             cursor: pointer;
 
@@ -88,7 +83,8 @@ body {
         box-shadow: 0 7px 40px $neutralGrey3;
         border-radius: 10px 10px 4px 4px;
 
-        margin: 0 10%;
+            max-width: 1311px;
+        margin: 0 auto;
 
         //concerne l'image du font du titre
         .imageTitle {
@@ -115,7 +111,7 @@ body {
                 }
 
                 p {
-                    font-family: 'Nunito', sans-serif;
+                    @include nunito;
                     font-weight: 400;
                 }
 
@@ -224,6 +220,8 @@ body {
                             .play {
                                 position: absolute;
                                 left: 250px;
+
+                                cursor: pointer;
                             }
 
                         }
@@ -266,41 +264,66 @@ body {
 
         // debut de design du formulaire
         .search {
+            @include nunito;
+            font-weight: 700;
             width: 100%;
             border-radius: 0 0 4px 4px;
 
+            text-align: center;
+
             form {
                 display: flex;
-                justify-content: space-around;
+                justify-content: center;
                 align-items: center;
 
                 border-radius: 0 0 4px 4px;
 
-                color: $neutralGrey3;
-
                 margin-top: 16px;
                 margin-bottom: 16px;
 
-                .searchCase {
-                    width: 30%;
+                font-size: 18px;
 
+                .searchCase {
+                    width: 32%;
+                    color: $neutralGrey3;
                     background-color: $neutrailGrey4;
                     border-radius: 0 0 4px 4px;
                     padding: 20px 10px;
 
                     border-radius: 8px;
-                    margin: 0 10px;
+                    margin: 0 8px;
 
                     input {
                         border: none;
                         background-color: $neutrailGrey4;
 
+                        width: 200px;
                         margin-left: 5px;
+
+                        font-size: 16px;
+                        outline: none;
+                    }
+                    select {
+                        border: none;
+                        background-color: $neutrailGrey4;
+                        color: $greydark;
+                        padding: 0 30px;
+
+                        margin-left: 5px;
+
+                        font-size: 16px;
+
+                    }
+
+                    i {
+                        color: $navyBlue;
                     }
                 }
 
                 //button submit btn
                 .btnSubmit {
+                    
+
                     align-items: center;
 
                     color: $neutralGrey3;
@@ -309,11 +332,16 @@ body {
                     padding: 20px 10px;
                     border-radius: 8px;
 
-                    width: 31%;
+                    width: 32%;
 
-                    margin: 5px 10px;
+                    margin: 5px 8px;
 
+                    cursor: pointer;
                     button {
+                        font-size: 16px;
+                        @include nunito;
+                        
+                        
                         border: none;
                         background-color: $primaryYellowOmlette;
                         color: $neutralWhite;
@@ -329,45 +357,304 @@ body {
         flex-direction: row;
         justify-content: space-between;
         align-items: end;
-        padding-top: 6%;
-        margin: 0 10%;
-        height: 700px;
+
+        padding-top: 100px;
+        margin: 0 auto;
+        max-width: 1311px;
+
+
         .nosPartenaires {
+            position: relative;
+
             width: 29%;
             color: black;
 
             display: flex;
             flex-direction: column;
+
+            max-height: 560px;
+            h2 {
+
+                font-size: 36px;
+                font-weight: 800;
+
+                background-image: url(../imgs/PatternPartnair.png);
+                background-repeat: no-repeat;
+                background-position: 70px;
+                background-size: 220px 20px;
+
+                margin-bottom: 0;
+
+            }
+
             p {
                 @include nunito;
-                font-size: 18px;
+                color: $greydark;
+
+                line-height: 170%;
+                font-weight: 300;
+                font-size: 20px;
+
+                width: 400px;
+
+                margin-bottom: 55px;
             }
+
+            .pictPartnerOne {
+                height: 387px;
+                .hashTagText {
+                    position: absolute;
+                    z-index: 3000;
+    
+                    bottom: 0px;
+                    height: 80px;
+    
+                    display: flex;
+    
+                    @include blur;
+                    img {
+                        width: 10%;
+                        height: 50%;
+                        padding-left: 7%;
+                        padding-right: 3%;
+                        padding-top: 2%
+                        
+                    }
+                    >p {
+                        @include nunito;
+                        font-style: italic;
+                        font-weight: 500;
+                        color: #FFFFFF;
+                        width: 70%;
+                        
+                    }
+                }
+            }
+
         }
 
         .maStory 
         {
             width: 69%;
-            color: black;
-
+            color: $greydark;
+            height: 270px;
             display: flex;
             flex-direction: row;
-            align-items: center;
+            align-items: end;
+
+            img {
+                width: 203px;
+                height: 270px;
+
+                margin-right: 3%;
+            }
 
             .textMaStory {
+                height: 100%;
                 display: flex;
                 flex-direction: column;
+                background-image: url(../imgs/Line-separator-maStory.png);
+                background-repeat: no-repeat;
+                background-position: 15% 4%;
 
-                .iconeMaStory {
-                    display: flex;
-                    .maStoryIcone {
+                @include nunito;
+                font-weight: 700;
+
+                    .textblue {
+                        padding-left: 2%;
+                        margin: 0;
+                        color: #79DCF2;
+                    }
+
+                    h2 {
+                        @include khula;
+                        font-weight: 700;
+                        font-size: 36px;
+                        margin: 0;
+                        color: $greydark;
+                    }
+
+                    p {
+                    
+                        margin: 0;
+                        font-size: 20px;
+
+                        @include nunito;
+                        color: $greydark;
+                    }
+
+                    .iconeMaStory {
+                        height: 40px;
+                        width: 100%;
+
                         display: flex;
-                        .explainIcone {
+                        align-items: flex-start;
+
+                        .maStoryIcone {
                             display: flex;
-                            flex-direction: column;
-                            justify-content: space-between;
+                            align-items: center;
+                            justify-content: start;
+
+                            width: 48%;
+                            
+                            padding-top: 40px;
+                            img {
+                                width: 38px;
+                                height: 38px;
+                            }
+
+                            .explainIcone {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+
+                                p {
+                                    font-size: 16px;
+                                }
+                            }
                         }
                     }
+            }
+        }
+    }
+
+
+    //section card Service. 
+    .sectionService {
+        color: $greydark;
+        background-color: $neutralGrey5;
+        max-width: 1311px;
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+
+        padding-bottom: 60px;
+        height: 600px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        .titleService > h2{
+            @include khula;
+            font-weight: 600;
+            width: 345px;
+            text-align: center;
+            font-size: 30px;
+            margin-top: -10px;
+        }
+        .containerRowCard {
+            height: 60%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: start;
+
+                .cardContainer {
+                    height: 100%;
+                    background-color: #ffffff;
+                    width: 300px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    text-align: center;
+                    border-radius: 5px;
+                    padding: 20px 10px 10px;
+                    margin: 20px;
+        
+                    i {
+                        font-size: 2em;
+                        color: #FFFFFF;
+                        background-color: $navyBlue;
+                        padding: 18px 16px;
+                        border-radius: 50%;
+                    }
+                    .titleCard {
+                        font-size: 20px;
+                        @include nunito;
+                        font-weight: 700;
+                        margin: 0;
+                        padding-top: 16px;
+                    }
+                    
+                    .cardText {
+                        
+                        font-size: 16px;
+                        margin-top: 0px;
+                    }
+        
+                    .cardBtn {
+                        @include BtnJauneOeufOutilne;
+                        background-color: #FFFFFF;
+                    }
+
+                    #iconeContract {
+                        padding: 20px 24px;
+                    }
                 }
+
+                #selectCardMidle {
+                    border-bottom: 3px solid $primaryYellowOmlette;
+                }
+        }
+    }
+
+    //section newsletter
+    .newsLetter {
+        max-width: 70%;
+        height: 200px;
+        background-color: $navyBlue;
+        margin-top: 60px;
+        margin-right: auto;
+        margin-left: auto;
+        
+        display: flex;
+        justify-content: space-around;
+        
+        border-radius: 5px;
+
+        .newsLetterContainer {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include khula;
+            font-weight: 700;
+            font-size: 24px;
+            color: #FFFFFF;
+
+            h3{
+                margin: 0;
+                padding-right: 50px;
+            } 
+
+            p {
+                margin: 0;
+                padding: 0;
+                font-size: 16px;
+                @include khula;
+                font-weight: 300px !important;
+            }
+        }
+
+        .InputNewsLetter {
+            display: flex;
+            input {
+                padding: 10px 50px 10px 25px;
+                border: none;
+            }
+            button {
+                color: #ffffff;
+                cursor: pointer;
+                background-color: #ffa800;
+                border: none;
+                padding: 10px 30px 10px 30px;
             }
         }
     }
