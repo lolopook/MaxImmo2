@@ -1,14 +1,14 @@
-@import "partials/colors", "partials/font", "partials/mixin";
+@import "partials/colors", "partials/font", "partials/mixin","partials/mediaQuery";
 
 
 body {
-    color: #c0c0c0;
+    color: #e2e2e2;
     font-family: 'Khula', sans-serif;
     // background-color: black;
 
     // la navigation
     nav {
-        color: $navyBlue;
+        color: $navyBlue; 
 
         display: flex;
         justify-content: space-between;
@@ -21,7 +21,7 @@ body {
         .logoNavBtn {
             display: flex;
             flex-direction: row;
-
+            
             .logoEnseigne {
                 display: flex;
                 align-items: center;
@@ -30,31 +30,68 @@ body {
             }
 
             // les menus des pages avec les liens
+            #linkPagesMedia {
+                display: none;
+            }
+
+            .menuBurG {
+                display: none;
+                .menuBurger {
+                    display: none;
+                }
+    
+                .menuCross {
+                    display: none;
+                }
+            }
+            
+            
+
             .linkPages {
                 display: flex;
                 align-items: center;
                 
                 .link {
-                    padding: 1px 10px;
-                    display: flex;
-                    align-items: center;
+                    .linkAcceuil {
 
-                    color: $neutralGrey3;
-
-                    text-decoration: none;
-
-                    // le pseudo trait en dessous de la selection
-                    &:hover {
-                        
-                        color: $navyBlue;
+                        padding: 1px 10px;
+                        display: flex;
+                        align-items: center;
                         padding-bottom: 0.5em;
+                        text-decoration: none;
+    
+                        color: $navyBlue;
                         background-image: url(../imgs/Active\ Pointer.png);
                         background-repeat: no-repeat;
                         background-position: bottom center;
+                    }
 
+                    .linkCatalog, .linkContact
+                    {
+                        
+                        padding: 1px 10px;
+                        display: flex;
+                        align-items: center;
+    
+                        color: $neutralGrey3;
+    
+                        text-decoration: none;
+    
+                    
+    
+                        // le pseudo trait en dessous de la selection
+                        // &:hover {
+                            
+                        //     color: $navyBlue;
+                        //     padding-bottom: 0.5em;
+                        //     background-image: url(../imgs/Active\ Pointer.png);
+                        //     background-repeat: no-repeat;
+                        //     background-position: bottom center;
+    
+                        // }
                     }
                     
-
+                    
                 }
             }
         }
@@ -83,7 +120,7 @@ body {
         box-shadow: 0 7px 40px $neutralGrey3;
         border-radius: 10px 10px 4px 4px;
 
-            max-width: 1311px;
+        max-width: 1311px;
         margin: 0 auto;
 
         //concerne l'image du font du titre
@@ -420,8 +457,10 @@ body {
                         padding-top: 2%
                         
                     }
+                    
                     >p {
                         @include nunito;
+
                         font-style: italic;
                         font-weight: 500;
                         color: #FFFFFF;
@@ -589,6 +628,8 @@ body {
                     .cardBtn {
                         @include BtnJauneOeufOutilne;
                         background-color: #FFFFFF;
+
+                        cursor: pointer;
                     }
 
                     #iconeContract {
@@ -604,7 +645,7 @@ body {
 
     //section newsletter
     .newsLetter {
-        max-width: 70%;
+        max-width: 1131px;
         height: 200px;
         background-color: $navyBlue;
         margin-top: 60px;
